@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>@victimize</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Fondo de video */
+    #backgroundVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="entryOverlay">
+    <div class="entry-text">Click to enter</div>
+  </div>
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop id="backgroundVideo">
+    <source src="https://r2.guns.lol/4fd837a8-2fd5-439d-af98-d36e6137ee4d.mp4" type="video/mp4">
+    
+  </video>
+  <!-- Tarjeta de perfil -->
+  <div class="card-container" id="profileCard">
+    <div class="profile-card">
+      <img src="https://cdn.discordapp.com/embed/avatars/3.png" alt="Avatar" class="avatar">
+      <div class="profile-info">
+        <h2 class="username">victimize</h2>
+        <p class="link">discord.gg/afraiid</p>
+        <div class="icons"> 
+          <a href="https://discord.gg/afraiid" target="_blank"><i class="fab fa-discord"></i></a>
+          <a href="https://github.com/yvngbeef" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:me@victim.cam"><i class="fas fa-envelope"></i></a>
+          <a href="https://t.me/devoraste" target="_blank"><i class="fab fa-telegram"></i></a>
+          <a href="https://victim.cam" target="_blank"><i class="fas fa-globe"></i></a>
+        </div>   
+      </div>
+      <div class="custom-player">
+        <button id="playPause" class="player-button">
+          <i class="fas fa-play"></i>
+        </button>
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <audio id="audio" loop>
+          <source src="wow.mp3" type="audio/mpeg">
+        </audio>
+      </div>      
+      <div class="views">
+        <span><i class="fas fa-eye"></i> 278,993</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

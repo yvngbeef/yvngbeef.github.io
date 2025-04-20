@@ -1,0 +1,224 @@
+body {
+  background-color: #0a0a0a;
+  color: white;
+  font-family: 'Satoshi', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  perspective: 1000px;
+}
+
+.profile-card {
+  background: rgba(0, 0, 0, 0.3); /* Fondo oscuro semitransparente */
+  backdrop-filter: blur(12px);   /* Desenfoque del fondo */
+  -webkit-backdrop-filter: blur(12px); /* Soporte Safari */
+  padding: 40px;
+  border-radius: 25px;
+  position: relative;
+  transition: transform 0.2s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+  width: 420px;
+  max-width: 90vw;
+}
+
+.avatar {
+  width: 70px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.profile-info {
+  margin-bottom: 15px;
+}
+
+.username {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.link {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-size: 28px;
+}
+
+.icons a {
+  color: white;
+  transition: color 0.3s;
+}
+
+.icons a:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7), 
+               0 0 15px rgba(255, 255, 255, 0.4); /* Glow */
+  transform: scale(1.1); /* Pequeño zoom para más interacción */
+  transition: all 0.2s ease;
+}
+
+.views {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 13px;
+  color: #aaa;
+  display: flex;
+  gap: 15px;
+}
+
+.status-card {
+  background: #111;
+  padding: 15px 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 300px;
+}
+
+.avatar-small {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.small-username {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.last-seen {
+  font-size: 13px;
+  font-style: italic;
+  color: #aaa;
+}
+
+.music-player {
+  background: #111;
+  padding: 15px;
+  border-radius: 15px;
+  width: 420px;
+}
+
+.music-player audio {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.profile-card:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2), /* Blanco con efecto neón */
+              0 0 40px rgba(255, 255, 255, 0.1); /* Blanco difuso */
+}
+
+
+
+
+
+/* Contenedor del reproductor */
+.custom-player {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente */
+  backdrop-filter: blur(10px);    /* Desenfoque */
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 15px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* sombra opcional */
+}
+
+/* Botón de play/pause */
+/* Botón de play/pause */
+.player-button {
+  background: none;
+  border: none;
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 24px; /* Tamaño más pequeño */
+  transition: color 0.3s ease;
+  margin-top: 8px; /* Bajado un poco más */
+}
+
+/* Efecto hover del botón */
+.player-button:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7), 
+               0 0 15px rgba(255, 255, 255, 0.4); /* Glow */
+  transform: scale(1.1); /* Pequeño zoom para más interacción */
+  transition: all 0.2s ease;
+}
+
+/* Barra de progreso */
+.progress-container {
+  width: 100%;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+}
+
+/* Barra de progreso que se ajusta dinámicamente */
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: rgba(255, 255, 255, 0.5);
+  lighting-color: #fff;
+  transition: width 0.2s linear;
+}
+
+#entryOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 1); /* Más opaco */
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+.entry-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  text-shadow: none;
+  user-select: none;
+  transition: text-shadow 0.3s ease;
+}
+
+/* ✨ Glow al hacer hover */
+#entryOverlay:hover .entry-text {
+  text-shadow: 
+    0 0 8px #ffffff,
+    0 0 16px #ffffff,
+    0 0 32px #ffffff;
+}
+
