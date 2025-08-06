@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>victim</title>
+  <link rel="icon" type="image/gif" href="favicon.gif">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: rgb(6,6,6);
+      color: #e0e0e0;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+    }
+    #enter-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(6,6,6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      cursor: pointer;
+      transition: opacity 1s ease;
+    }
+    #enter-overlay.fade-out {
+      opacity: 0;
+    }
+    #enter-overlay h1 {
+      color: #e0e0e0;
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+    header {
+      position: relative;
+      height: 450px;
+    }
+    .angel {
+    position: absolute;
+    top: 100px; /* Mueve la imagen más abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px; /* Haz la imagen más grande */
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 1rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #aaa;
+      margin-bottom: 1rem;
+    }
+    .links {
+      margin: 1.5rem 0;
+    }
+    .links a {
+      display: block;
+      color: #f05454;
+      margin: 0.5rem 0;
+      transition: color 0.2s ease;
+    }
+    .links a:hover {
+      color: #ff6f6f;
+      text-decoration: underline;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #333;
+      margin: 2rem 0;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 0.5rem auto;
+      padding: 0.75rem 1rem;
+      text-align: center;
+      max-width: 300px;
+      background: none;
+      border: none;
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.875rem;
+      color: #888;
+      padding-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="enter-overlay">
+    <h1>Click to Enter</h1>
+  </div>
+  <header>
+    <img class="angel swing" src="why.png" alt="x_x" />
+  </header>
+  <div class="container">
+    <h2>If you see this, just say goodbye</h2>
+    <div class="links">
+      <a href="https://victim.cam/warrier.txt" target="_blank">W_ARRIER DOX SOON...</a>
+      <a href="https://victim.cam/empire.txt" target="_blank">EMPIRE VC STAFF DOX SOON...</a>
+    </div>
+    <hr />
+    <ul>
+      <li>asdf</li>
+      <li>tracker</li>
+    </ul>
+    <footer>
+      <p>&copy; 2025 victim. All rights reserved.</p>
+      <p>Made by asdf</p>
+    </footer>
+  </div>
+  <audio id="background-music" src="me.mp3" loop></audio>
+  <script>
+    document.getElementById('enter-overlay').addEventListener('click', function() {
+      this.classList.add('fade-out');
+      var audio = document.getElementById('background-music');
+      audio.play();
+      setTimeout(() => {
+        this.remove();
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
